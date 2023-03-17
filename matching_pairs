@@ -1,1 +1,14 @@
+def matching_pairs(values, target):
+    saved = set()
+    for value in values:
+        if target - value in saved:
+            return (value, target - value)
+        saved.add(value)
+        print(saved)
+    return None
 
+
+
+
+
+print(matching_pairs([4,2,7,8,12,1,9,3], 5))
